@@ -1,0 +1,902 @@
+/* *
+{
+    box-sizing: border-box;
+}
+.flex
+{
+    width: 600px;
+    padding: 20px;
+    margin: 20px auto;
+    background-color: #eee;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    
+
+}
+.flex div
+{
+    background-color: red;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    width: 25%;
+}
+.float
+{
+    width: 600px;
+    overflow: hidden;
+    padding: 20px;
+    margin: 20px auto;
+    background-color: #eee;
+}
+.float div
+{
+    background-color: red;
+    color: white;
+    text-align: center;
+    width: 25%;
+    float: left;
+    padding: 20px;
+} */
+*
+{
+    box-sizing: border-box;
+    padding :0;
+    margin: 0;
+    font-family: sans-serif;
+}
+header
+{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    background-color: black;
+    padding: 10px 200px;
+    word-spacing: 20px;
+    text-align: center;
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+}
+.logo
+{
+    color:rgb(10, 107, 186);
+    font-size: 32px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+header div
+{
+    padding-top: 9px;
+}
+header div a
+{
+    color: rgb(10, 107, 186);
+    font-size: 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+}
+.section .image
+{
+    position: absolute;
+    right: 146;
+}
+.section
+{
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.section img
+{
+    height:100vh;
+}
+.section::before
+{
+    content:"";
+    background-image:linear-gradient(#e8f0ff 87.3%, #142a54 40%);
+    height: 100vh;
+    width: 100%;
+}
+.section::after
+{
+    content:"";
+    background-color: #142a54 ;
+    height: 100vh;
+    width: 26%;
+    z-index: 5;
+}
+/* Cool share button made by: csozi | Website: english.csozi.hu*/
+
+.buttons {
+    position: relative;
+    display: grid;
+    place-items: center;
+    height: fit-content;
+    width: fit-content;
+    transition: 0.3s;
+    border-radius: 50%;
+    left: -766px;
+    top: 686px;
+  }
+  
+  .buttons:hover {
+    padding: 60px;
+  }
+  
+  .buttons:hover .button {
+    box-shadow: 5px 5px 12px #cacaca, -5px -5px 12px #ffffff;
+  }
+  
+  .main-button {
+    position: relative;
+    display: grid;
+    place-items: center;
+    padding: 10px;
+    border: none;
+    background: #e8e8e8;
+    box-shadow: 5px 5px 12px #cacaca, -5px -5px 12px #ffffff;
+    border-radius: 50%;
+    transition: 0.2s;
+    z-index: 100;
+  }
+  
+  .button {
+    position: absolute;
+    display: grid;
+    place-items: center;
+    padding: 10px;
+    border: none;
+    background: #e8e8e8;
+    box-shadow: 5px 5px 12px rgba(202, 202, 202, 0), -5px -5px 12px rgba(255, 255, 255, 0);
+    transition: 0.3s;
+    border-radius: 50%;
+  }
+  
+  .icon:hover {
+    fill: #08c;
+  }
+  
+  .buttons:hover .icon {
+    translate: 70px 0px;
+
+  }
+  
+  .twitter-button:hover {
+    background: #1CA1F1;
+  }
+  
+  .buttons:hover .twitter-button {
+    translate: 47px -47px;
+    box-shadow: 5px 5px 12px #cacaca, -5px -5px 12px #ffffff;
+  }
+  
+  .reddit-button:hover {
+    background: #FF4500;
+  }
+  
+  .buttons:hover .reddit-button {
+    translate: 0px -70px;
+    box-shadow: 5px 5px 12px #cacaca, -5px -5px 12px #ffffff;
+  }
+  
+  .messenger-button:hover {
+    background: #0093FF;
+  }
+  
+  .buttons:hover .messenger-button {
+    translate: -47px -47px;
+    box-shadow: 5px 5px 12px #cacaca, -5px -5px 12px #ffffff;
+  }
+  .buttons:hover .pinterest-button {
+    translate: -70px 0px;
+    box-shadow: #cacaca, #ffffff;
+  }
+  
+  .instagram-button:hover {
+    background: #F914AF;
+  }
+  
+  .buttons:hover .instagram-button {
+    translate: -47px 47px;
+    box-shadow: 5px 5px 12px #cacaca, -5px -5px 12px #ffffff;
+  }
+  
+  .snapchat-button:hover {
+    background: #FFFC00;
+  }
+  
+  .buttons:hover .snapchat-button {
+    translate: 0px 70px;
+    box-shadow: 5px 5px 12px #cacaca, -5px -5px 12px #ffffff;
+  }
+  
+  .whatsapp-button:hover {
+    background: #25D366;
+  }
+  
+  .buttons:hover .whatsapp-button {
+    translate: 47px 47px;
+    box-shadow: 5px 5px 12px #cacaca, -5px -5px 12px #ffffff;
+  }
+  .buttons:hover .socialContainer {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: rgb(44, 44, 44);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition-duration: .3s;
+  }
+  .socialSvg {
+  width: 17px;
+}
+
+.socialSvg path {
+  fill: rgb(255, 255, 255);
+}
+.pinterest-button:hover .socialContainer
+{
+    background-color: rgb(24, 159, 226);
+}
+.icon{
+    position: relative;
+    height: 35px;
+    border-radius: 50%;
+    background-color: white;
+    border: 1px black solid;
+    overflow: hidden;
+  }
+.button3
+{
+  position: absolute;
+  bottom: 192px;
+  left: 200px;
+  background-color: black;
+  width: 195px;
+  height: 50px;
+  text-align: center;
+  padding: 13px;
+  border-radius: 13px;
+  transition: 0.7s ease;
+}
+.zorar{
+color: #08c;
+text-decoration: none;
+font-size: 21px;
+
+}
+.button3:hover 
+{
+  transform: scale(1.1);
+}
+
+.content
+{
+  height: 100%;
+  text-align: center;
+  background-color: white;
+}
+.cardes
+{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+}
+.title
+{
+  font-size: 50px;
+  display: inline-block;
+  padding: 10px;
+  color: #005eff;
+  font-weight: bold;
+}
+.logo2
+{
+  font-size: 120px;
+  padding: 20px;
+
+}
+.card h3
+{
+  font-size: 32px;
+  
+}
+.card
+{
+  margin-right: 15px;
+  padding: 25px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  width: 21.25em;
+  box-shadow: 0 5px 25px rgba(9, 9, 9, 0.151);
+  transition: 0.7s ease;
+}
+.card:hover
+{
+  transform: scale(1.1);
+  cursor: pointer;
+}
+.cardes
+{
+  display: flex;
+  justify-content: center;
+
+}
+.card-pro
+{
+  overflow: hidden;
+  padding: 20px;
+  margin: 20px;
+  text-align: center;
+  box-shadow:0 5px 25px rgba(9, 9, 9, 0.151); 
+  margin-right: 15px;
+  padding: 25px;
+  border-radius: 10px;
+  transition: 0.7s ease;
+}
+.card-pro img
+{
+  width: 25em;
+  height:18em;
+}
+.card-pro:hover
+{
+  transform: scale(1.1);
+  cursor: pointer;
+}
+.desc
+{
+  padding: 5px;
+  font-weight: 800;
+  font-size: 0.9em;
+}
+.info
+{
+  display: flex;
+  justify-content: space-between;
+}
+.footer .card {
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px 25px;
+  gap: 20px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.055);
+  background-color: black;
+}
+/* for all social containers*/
+.socialContainer {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition-duration: .3s;
+}
+/* instagram*/
+.containerOne:hover {
+  background-color: #d62976;
+  transition-duration: .3s;
+}
+/* twitter*/
+.containerTwo:hover {
+  background-color: #00acee;
+  transition-duration: .3s;
+}
+/* linkdin*/
+.containerThree:hover {
+  background-color: #0072b1;
+  transition-duration: .3s;
+}
+/* Whatsapp*/
+.containerFour:hover {
+  background-color: #128C7E;
+  transition-duration: .3s;
+}
+
+.socialContainer:active {
+  transform: scale(0.9);
+  transition-duration: .3s;
+}
+
+.socialSvg {
+  width: 17px;
+}
+.socialContainer:hover .socialSvg {
+  animation: slide-in-top 0.3s both;
+}
+
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+.footer
+{
+  background-color: black;
+  display: flex;
+  justify-content:space-between;
+  align-content: center;
+  height: fit-content;
+}
+.footer p
+{
+  color: white;
+  justify-content: center;
+  align-content: center;
+  padding: 40px;
+}
+#services
+{
+  background-color: black;
+}
+#services .title
+{
+  padding: 50px;
+}
+#projects
+{
+  background-color: #142a54;
+}
+#contact
+{
+  background-color: black;
+}
+@media only screen 
+    and (width: 414px) 
+    and (height: 896px) 
+    and (-webkit-device-pixel-ratio: 3) { }
+
+    @media  screen and (min-width:401px) and (max-width:500px)
+{
+  header
+  {
+    justify-content:space-between 20%;
+    padding: 10px 10px;
+    word-spacing: 2.5px;
+    width: 100%;
+  }
+  header .logo
+  {
+    padding-left:20px ;
+    font-size: 15px;
+    padding-top: 10px;
+  }
+  header .navigation
+  {
+      padding-left: 75px;
+      padding-bottom: 5px;
+  }
+  header .navigation a
+  {
+    font-size: 10px;
+
+  }
+  .section .image
+  {
+    width: 125%;
+    z-index: 10;
+    position: absolute;
+    right: -83px;
+  }
+  .section::after
+  {
+    content: "";
+    z-index: 6;
+    
+  }
+  .section::before
+  {
+    content: "";
+    z-index: 6;
+    
+  }
+  .section .buttons
+  {
+    top: 685px;
+    left: -180px;
+  }
+  .section .buttons svg
+  {
+    width:15px;
+    height: 15px;
+
+  }
+  .buttons .button
+  {
+    z-index: 55;
+    width: 35px;
+    height: 35px;
+  }
+  .icon
+  {
+    width: 35px;
+    height: 35px;
+    position: absolute;
+  }
+  .icon svg
+  {
+    margin: 10px;
+  }
+  .section .buttons svg
+  {
+    width:15px;
+    height: 15px;
+
+  }
+  .buttons:hover .socialContainer
+  {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+  }
+  .section .socialContainer
+  {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+  }
+  .section .socialContainer
+  {
+    width: 15px;
+    height: 15px;
+  }
+  .section .button3
+  {   
+    width: fit-content;
+    height: fit-content;
+    padding: 10px;
+    left: 25px;
+    z-index: 11;
+    bottom: 520px;
+  }
+   .section .zorar
+  {
+    font-size: 14px;
+    font-weight: 800;
+  }
+  .content .cardes
+  { 
+    flex-direction: column;
+    align-content: center;
+  }
+  .content .title
+  {
+    font-size: 30px;
+    text-align: center;
+  }
+  .content
+  {
+    width: 120%;    
+  }
+  #services .title
+  {
+    padding: 20px 0 20px 0 ;
+  }
+  #services .card
+  {
+    margin-right:10px;
+    margin-bottom: 20px;
+    width: 23em;
+  }
+  #services .card h3
+  {
+    font-size: 25px;
+  }
+  .content .card
+  {
+    margin-right:40px;
+    margin-bottom: 20px;
+    width: 18em;
+  }
+  #services .logo2
+  {
+    font-size: 80px;
+    padding: 0;
+    margin: -20px 0 -10px 0;
+  }
+  #projects
+  {
+    height: 100%;
+  }
+  #projects .title {
+    font-size: 30px;
+    text-align: center;
+    padding:  10px;
+}
+  #projects .cardes
+{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-left: -36px;
+}
+#contact .title
+{
+  font-size: 30px;
+  text-align: center;
+  padding: 25px;
+}
+  #projects .card-pro
+  {
+    width: 23em;
+    margin-left: 40px;
+    background-color: #688fd9;
+
+  }
+  #projects img
+  {
+    width:21em;
+    padding-right: 10px;
+  }
+  #contact .card
+  {
+    width:22em;
+    margin-right: 10px;
+    margin-bottom: 30px;
+  }
+  .footer 
+  {
+    position: relative;
+    bottom: 0px;
+    width: 497px;
+  }
+  .footer .card
+  {
+    display:flex;
+    gap: 0px;
+    flex-wrap: nowrap;
+    padding: 0;
+  }
+  .footer p
+  {
+    font-size: 10px;
+    padding:25px 7px 7px 7px;
+    margin: 0;
+  }
+  .footer .socialContainer
+  {
+    font-size: 10px;
+  }
+}
+
+
+
+/*---------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+    @media (max-width:400px)
+{
+  header
+  {
+
+    padding: 10px 10px;
+    word-spacing: 2.5px;
+    width: 100%;
+  }
+  header .logo
+  {
+    padding-left:20px ;
+    font-size: 15px;
+    padding-top: 10px;
+  }
+  header .navigation
+  {
+      padding-left: 75px;
+      padding-bottom: 5px;
+  }
+  header .navigation a
+  {
+    font-size: 10px;
+
+  }
+  .section .image
+  {
+    width: 452px;
+    z-index: 10;
+    position: absolute;
+    right: -75px;
+  }
+  .section::after
+  {
+    content: "";
+    z-index: 0;
+    
+  }
+  .section::before
+  {
+    content: "";
+    z-index: 0;
+    
+  }
+  .section .buttons
+  {
+    top: 500px;
+    left: -130px;
+  }
+  .buttons .button
+  {
+    z-index: 55;
+    width: 35px;
+    height: 35px;
+  }
+  .icon
+  {
+    width: 35px;
+    height: 35px;
+    position: absolute;
+  }
+  .icon svg
+  {
+    margin: 10px;
+  }
+  .section .buttons svg
+  {
+    width:15px;
+    height: 15px;
+
+  }
+  .buttons:hover .socialContainer
+  {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+  }
+  .section .socialContainer
+  {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+  }
+  .section .button3
+  {   
+    width: fit-content;
+    height: fit-content;
+    padding: 10px;
+    left: 25px;
+    z-index: 11;
+    bottom: 400px;
+  }
+   .section .zorar
+  {
+    font-size: 14px;
+    font-weight: 800;
+  }
+  .content .cardes
+  { 
+    flex-direction: column;
+    align-content: center;
+  }
+  .content .title
+  {
+    font-size: 30px;
+    text-align: center;
+  }
+  .content
+  {
+    width: 120%;    
+  }
+  #services
+{
+height: 135vh;
+}
+  #services .title
+  {
+    padding: 20px 0 20px 0 ;
+  }
+  #services .card
+  {
+    margin-right:10px;
+    margin-bottom: 20px;
+    width: 23em;
+  }
+  #services .card h3
+  {
+    font-size: 25px;
+  }
+  .content .card
+  {
+    margin-right:40px;
+    margin-bottom: 20px;
+    width: 18em;
+  }
+  #services .logo2
+  {
+    font-size: 80px;
+    padding: 0;
+    margin: -20px 0 -10px 0;
+  }
+  #projects
+  {
+    height: 390vh;
+  }
+  #projects .title {
+    font-size: 30px;
+    text-align: center;
+    padding:  10px;
+}
+  #projects .cardes
+{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-left: -36px;
+}
+#contact
+{
+  height: 110vh;
+}
+#contact .title
+{
+  font-size: 30px;
+  text-align: center;
+  padding: 25px;
+}
+  #projects .card-pro
+  {
+    width: 23em;
+    margin-left: 40px;
+    background-color: #688fd9;
+
+  }
+  #projects img
+  {
+    width:21em;
+    padding-right: 10px;
+  }
+  #contact .card
+  {
+    width:22em;
+    margin-right: 10px;
+    margin-bottom: 30px;
+  }
+  .footer 
+  {
+    position: relative;
+    bottom: 0px;
+    width: 450px;
+  }
+  .footer .card
+  {
+    display:flex;
+    gap: 0px;
+    flex-wrap: nowrap;
+    padding: 0;
+  }
+  .footer p
+  {
+    font-size: 10px;
+    padding:25px 7px 7px 7px;
+    margin: 0;
+  }
+  .footer .socialContainer
+  {
+    font-size: 10px;
+  }
+}
